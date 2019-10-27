@@ -1,0 +1,32 @@
+﻿@model Blog.MVC.CORE.Models.Account.RegisterModel
+
+<fieldset class="account">
+    <h1>New User Registration</h1>
+
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <p>
+            @Html.ValidationSummary()
+        </p>
+        <p>
+            @Html.LabelFor(x => x.EmailAddress)
+            @Html.EditorFor(x => x.EmailAddress)
+            @Html.ValidationMessageFor(x => x.EmailAddress)
+        </p>
+        <p>
+            @Html.LabelFor(x => x.Password)
+            @Html.EditorFor(x => x.Password)
+            @Html.ValidationMessageFor(x => x.Password)
+        </p>
+        <p>
+
+            @Html.LabelFor(x => x.ConfirmPassword)
+            @Html.EditorFor(x => x.ConfirmPassword)
+            @Html.ValidationMessageFor(x => x.ConfirmPassword)
+        </p>
+        <p>
+
+            <button type="submit">Register</button>
+        </p>
+    }
+</fieldset>

@@ -1,0 +1,10 @@
+﻿@inject Blog.MVC.CORE.Models.Services.FormatingService Format
+@model Blog.MVC.CORE.Models.Post
+
+<article class="blog-post">
+    <h1><a href="@Url.Action("post","blog",new { year=Model.Posted.Year, month=Model.Posted.Month, title=Model.key })">@Model.Title</a></h1>
+    <div class="details">
+        Posted <span>@Format.AsShortDate(Model.Posted) </span> by <span> @Model.Author</span>
+    </div>
+    <div>@Model.Body</div>
+</article>

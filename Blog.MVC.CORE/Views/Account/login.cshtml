@@ -1,0 +1,28 @@
+﻿@addTagHelper "*,Microsoft.AspNetCore.Mvc.TagHelpers"
+@model Blog.MVC.CORE.Models.Account.LoginModel
+
+<fieldset class="account">
+    <h1>Login User</h1>
+
+    <form role="form" method="post" asp-action="Login">
+        <div asp-validation-summary="All" class="input-validation-error"></div>
+
+        <p>
+            <label asp-for="EmailAddress"></label>
+            <input type="email" asp-for="EmailAddress" class="form-control" placeholder="Email Address" />
+            <span asp-validation-for="EmailAddress"></span>
+
+        </p>
+        <p>
+            <label asp-for="Password"></label>
+            <input type="password"  asp-for="Password" class="form-control" placeholder="Password" />
+            <span asp-validation-for="Password"></span>
+
+        </p>
+        <p>
+
+            <button type="submit">Login</button>
+        </p>
+    </form>
+   
+</fieldset>
